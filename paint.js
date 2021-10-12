@@ -11,7 +11,9 @@ Paint.prototype.isTinEmpty = function(){
     }
     return result;
 };
-
+Paint.prototype.emptyTin = function(){
+    return this.numOfLitres = 0;
+};
 
 
 module.exports = Paint;

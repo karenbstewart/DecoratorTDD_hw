@@ -20,7 +20,7 @@ describe('Paint', function(){
     it('should be able to empty itself of paint', function(){
         const actual = paint.emptyTin(); 
         assert.strictEqual(actual, 0);
-
+    });
 
 
 });
