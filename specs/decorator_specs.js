@@ -17,8 +17,15 @@ describe('Decorator', function(){
         const paint = new Paint(7);
         decorator.addPaintToStock('Paint')
         const actual = decorator.paintStock.length;
-        assert.deepStrictEqual(actual, []);
+        assert.deepStrictEqual(actual, 1);
     });
-
+    it('be able to calculate total litres paint it has in stock', function(){
+        const paint1 = new Paint(7);
+        const paint2 = new Paint(5);
+        decorator.addPaintToStock(paint1)
+        decorator.addPaintToStock(paint2)
+        const actual = decorator.litresOfPaintInStock();
+        assert.StrictEqual(actual, 12);
+    });
 
 });
