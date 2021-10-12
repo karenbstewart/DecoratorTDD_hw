@@ -13,6 +13,10 @@ describe('Paint', function(){
         const actual = paint.numOfLitres;
         assert.strictEqual(actual, 5)
     });
+    it('be able to check if it is empty', function(){
+        const actual = paint.isTinEmpty(); 
+        assert.strictEqual(actual, false);
+    });
 
 
 
