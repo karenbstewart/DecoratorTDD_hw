@@ -25,7 +25,7 @@ describe('Decorator', function(){
         decorator.addPaintToStock(paint1)
         decorator.addPaintToStock(paint2)
         const actual = decorator.litresOfPaintInStock();
-        assert.StrictEqual(actual, 12);
+        assert.strictEqual(actual, 12);
     });
 
 });
