@@ -22,10 +22,12 @@ describe('Decorator', function(){
     it('be able to calculate total litres paint it has in stock', function(){
         const paint1 = new Paint(7);
         const paint2 = new Paint(5);
+        const paint3 = new Paint(10);
         decorator.addPaintToStock(paint1)
         decorator.addPaintToStock(paint2)
+        decorator.addPaintToStock(paint3)
         const actual = decorator.litresOfPaintInStock();
-        assert.strictEqual(actual, 12);
+        assert.strictEqual(actual, 22);
     });
 
 });
