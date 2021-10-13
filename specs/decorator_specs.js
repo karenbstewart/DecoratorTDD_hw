@@ -39,5 +39,14 @@ describe('Decorator', function(){
         const actual = decorator.hasEnoughPaint(room1);
         assert.strictEqual(actual, false);
     });
+    it('be able to paint room if has enough paint in stock', function(){
+        const paint1 = new Paint(27);
+        const paint2 = new Paint(15);
+        decorator.addPaintToStock(paint1);
+        decorator.addPaintToStock(paint2);
+        room1 = new Room(21, true, true );
+        const actual = decorator.canRoomBePainted(room1);
+        assert.strictEqual(actual, true);
+    });
 
 });
