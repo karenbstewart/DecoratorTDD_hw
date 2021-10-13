@@ -36,7 +36,7 @@ describe('Decorator', function(){
         decorator.addPaintToStock(paint1);
         decorator.addPaintToStock(paint2);
         room1 = new Room(21, true, true );
-        const actual = decorator.hasEnoughPaint();
+        const actual = decorator.hasEnoughPaint(room1);
         assert.strictEqual(actual, false);
     });
 

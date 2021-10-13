@@ -1,5 +1,7 @@
 // const Paint = require('/paint.js');
 
+const { RawTextHelpFormatter } = require("argparse");
+
 const Decorator = function(){
     this.paintStock = [];
 };
@@ -16,6 +18,20 @@ Decorator.prototype.litresOfPaintInStock = function(){
     };
     return totalPaint;
 };
+
+Decorator.prototype.hasEnoughPaint = function(room){
+    let paintAmount = this.litresOfPaintInStock();
+    let roomArea = room.area;
+    let result;
+    if ( roomArea >= paintAmount){
+        result = true;
+    }else{
+        result = false;
+    }
+    return result;
+};
+
+
 
 
 
