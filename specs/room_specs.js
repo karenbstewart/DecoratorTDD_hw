@@ -6,7 +6,7 @@ describe('Room', function(){
     let room;
 
     this.beforeEach(function(){
-        room = new Room(120, true, true )
+        room = new Room(120, true, true );
     });
     it('should have an area in sq mtrs', function(){
         const actual = room.area;
